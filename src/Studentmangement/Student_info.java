@@ -37,13 +37,18 @@ public class Student_info { // define the a class for student info
  class main{                                         // main class
 	 public static void main(String args[]) {   
 		 Student_mangement managemnt = new Student_mangement();    // creating the obj  for the mangemetn class 
-		 Student_info student1=new Student_info("mateen",67);	   //creating the obj for the Student_info class so that we can add 
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter the details ");
+		 String name = sc.next();
+		 int grade = sc.nextInt();
+		 
+		 Student_info student1=new Student_info(name,grade);	   //creating the obj for the Student_info class so that we can add 
 		 															// values to  the class info
-		 Student_info student2=new Student_info("king",87);
+		
 		 
 		 managemnt.addStudent(student1);                            // by using the obj of managemnt class we are adding the values to the 
 		 															// array list of managemnt class
-		 managemnt.addStudent(student2);
+		
 		 managemnt.displayallstudents();							// with this we are displaying the students details 
 		 
 	 }
